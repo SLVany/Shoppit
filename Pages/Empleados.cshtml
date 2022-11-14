@@ -1,0 +1,27 @@
+﻿@page
+@model Shoppit.Pages.EmpleadosModel
+@{
+    ViewData["Title"] = "Lista de temas";
+}
+<section>
+    <h2>Listado de Empleados</h2>
+    <table class="table table-dark table-striped">
+        <thead class="thead-dark">
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.empleados)
+        {
+            <tr>
+                <td>@item.id_empleado</td>
+                <td>@item.nombre_empleado</td>
+                <td>@item.apellido_empleado</td>
+            </tr>
+        }
+    </tbody>
+</table>
+</section>
